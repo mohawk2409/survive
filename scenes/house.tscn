@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ddyhk8bmpuf04"]
+
+[ext_resource type="Texture2D" uid="uid://ovp8o184sant" path="res://assets/sprites/maison_abandonnee_x4.png" id="1_d7po0"]
+[ext_resource type="Script" uid="uid://b6w6p4ri2mtgm" path="res://scripts/house.gd" id="1_qtlar"]
+[ext_resource type="PackedScene" uid="uid://b6ictah8xjjgm" path="res://scenes/text_box.tscn" id="3_rk7hg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsxpc"]
+size = Vector2(15, 6)
+
+[node name="House" type="Area2D" unique_id=1347396065]
+script = ExtResource("1_qtlar")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=740474321]
+position = Vector2(0, 1)
+scale = Vector2(0.26785713, 0.26785713)
+texture = ExtResource("1_d7po0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1117845153]
+position = Vector2(-18.5, 31)
+shape = SubResource("RectangleShape2D_hsxpc")
+
+[node name="TextBox" parent="." unique_id=1452998785 instance=ExtResource("3_rk7hg")]
+offset_left = 12.0
+offset_top = -25.0
+offset_right = 52.0
+offset_bottom = -13.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

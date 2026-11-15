@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ciol70vwai4ow"]
+
+[ext_resource type="Script" uid="uid://dc5f15a0a6in6" path="res://scripts/axe.gd" id="1_725vr"]
+[ext_resource type="Texture2D" uid="uid://dji4es8uslb4q" path="res://assets/sprites/stone-hatchet-16x16.png" id="1_odgf8"]
+[ext_resource type="Resource" uid="uid://mi06kijcrvri" path="res://inventory/axe.tres" id="2_8s0ly"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a6vb0"]
+radius = 6.0
+
+[node name="Area2D" type="Area2D" unique_id=739423097]
+collision_mask = 2
+script = ExtResource("1_725vr")
+item = ExtResource("2_8s0ly")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2118130201]
+texture = ExtResource("1_odgf8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578661237]
+z_index = 1
+shape = SubResource("CircleShape2D_a6vb0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

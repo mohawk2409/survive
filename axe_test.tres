@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://cqp1bwx8dklci"]
+
+[ext_resource type="Script" uid="uid://c28dd7213dpph" path="res://inventory/weapon.gd" id="1_axtrk"]
+[ext_resource type="Texture2D" uid="uid://dji4es8uslb4q" path="res://assets/sprites/stone-hatchet-16x16.png" id="2_rfpg6"]
+
+[resource]
+script = ExtResource("1_axtrk")
+name = "axe"
+texture = ExtResource("2_rfpg6")
+metadata/_custom_type_script = "uid://c28dd7213dpph"

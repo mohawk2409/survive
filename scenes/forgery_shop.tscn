@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cg1nb8x6av67s"]
+
+[ext_resource type="Texture2D" uid="uid://8jrxq5xombti" path="res://assets/sprites/atelier_marchand_128x88.png" id="1_e7loi"]
+[ext_resource type="Script" uid="uid://dqo4dm16ak40b" path="res://scripts/forgery_shop.gd" id="1_kkyyx"]
+[ext_resource type="PackedScene" uid="uid://63qy82421uv2" path="res://scenes/fabrication.tscn" id="3_es1c8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6vb0"]
+size = Vector2(129, 86)
+
+[node name="Area2D" type="Area2D" unique_id=977264550]
+collision_mask = 2
+script = ExtResource("1_kkyyx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=607647457]
+texture = ExtResource("1_e7loi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544830430]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_a6vb0")
+
+[node name="Fabrication" parent="." unique_id=1250993282 instance=ExtResource("3_es1c8")]
+visible = false
+offset_left = -51.0
+offset_top = -32.0
+offset_right = -51.0
+offset_bottom = -32.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

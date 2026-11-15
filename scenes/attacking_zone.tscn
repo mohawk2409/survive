@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cycmyc21nslae"]
+
+[ext_resource type="Script" uid="uid://gtxy6x64q3b" path="res://scripts/attacking_zone.gd" id="1_tt7gm"]
+
+[node name="Area2D" type="Area2D" unique_id=620049087]
+script = ExtResource("1_tt7gm")

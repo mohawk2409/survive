@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://fh5mtav07tgw"]
+
+[ext_resource type="Script" uid="uid://hmw06xmtd4j0" path="res://inventory/stick_collectable.gd" id="1_m43rf"]
+[ext_resource type="Resource" uid="uid://ukk6om2kwj2k" path="res://inventory/stick.tres" id="2_nv3jk"]
+[ext_resource type="Texture2D" uid="uid://dn8x60k4wgt5c" path="res://assets/sprites/baton_16x16.png" id="4_gne4f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a6vb0"]
+radius = 6.0827627
+
+[node name="stick_collectable" type="StaticBody2D" unique_id=1776421908]
+script = ExtResource("1_m43rf")
+item = ExtResource("2_nv3jk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1712858530]
+texture = ExtResource("4_gne4f")
+
+[node name="interactable_area" type="Area2D" parent="." unique_id=143547890]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area" unique_id=794890966]
+shape = SubResource("CircleShape2D_a6vb0")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]

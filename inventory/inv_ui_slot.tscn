@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://yfngsuuelvbx"]
+
+[ext_resource type="Texture2D" uid="uid://bdmr7erqi1bj7" path="res://inventory/inventory-slot.png" id="1_dfngl"]
+[ext_resource type="Script" uid="uid://bwdauaepmajs8" path="res://inventory/inv_ui_slot.gd" id="1_fcwim"]
+
+[node name="Inv_UI_slot" type="Panel" unique_id=425873560]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(16, 16)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fcwim")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=404431289]
+texture = ExtResource("1_dfngl")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=501396965]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=1664129145]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel" unique_id=1320043142]
+
+[node name="Label" type="Label" parent="CenterContainer/Panel" unique_id=1510391242]
+custom_minimum_size = Vector2(20, 23)
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 23.0
+scale = Vector2(0.35, 0.35)
+text = "99"
+horizontal_alignment = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

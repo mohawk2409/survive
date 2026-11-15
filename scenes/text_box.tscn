@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b6ictah8xjjgm"]
+
+[ext_resource type="Script" uid="uid://boyj4fsg8e7ex" path="res://scripts/text_box.gd" id="1_wscpg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bgk5"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0017089455, 0.0059639635, 0.0064467387, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="TextBox" type="Control" unique_id=1452998785]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = 18.0
+offset_right = 37.0
+offset_bottom = 58.0
+script = ExtResource("1_wscpg")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1543099068]
+z_index = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_3bgk5")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1601331270]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=745612813]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40

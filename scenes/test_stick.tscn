@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c77fdyljrjx4o"]
+
+[ext_resource type="Script" uid="uid://dc5f15a0a6in6" path="res://scripts/axe.gd" id="1_42lpy"]
+[ext_resource type="Resource" uid="uid://mi06kijcrvri" path="res://inventory/axe.tres" id="2_24f32"]
+[ext_resource type="Texture2D" uid="uid://cuoumcpnjv42r" path="res://assets/sprites/wooden-stick-7e85.png" id="3_gltt4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a6vb0"]
+radius = 14.0
+
+[node name="Area2D" type="Area2D" unique_id=739423097]
+scale = Vector2(0.5, 0.5)
+collision_mask = 2
+script = ExtResource("1_42lpy")
+item = ExtResource("2_24f32")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2118130201]
+texture = ExtResource("3_gltt4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578661237]
+z_index = 1
+shape = SubResource("CircleShape2D_a6vb0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://pv6brclxefg3"]
+
+[ext_resource type="Script" uid="uid://c0hxu03wlcdic" path="res://scripts/scores.gd" id="1_p8jrb"]
+[ext_resource type="Texture2D" uid="uid://cu0kbp5sl3b0i" path="res://assets/sprites/coin.png" id="1_r5nmk"]
+
+[node name="Score" type="Control" unique_id=1507311229]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 4)
+script = ExtResource("1_p8jrb")
+
+[node name="Label" type="Label" parent="." unique_id=325859803]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = -26.0
+offset_right = 45.0
+offset_bottom = -9.0
+scale = Vector2(3, 3)
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=593307825]
+scale = Vector2(3, 3)
+texture = ExtResource("1_r5nmk")
+region_enabled = true
+region_rect = Rect2(17.07111, 0, 13.408321, 16)
