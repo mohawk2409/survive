@@ -5,20 +5,17 @@
 
 [node name="bottom_bar_ui" type="Control" unique_id=879348506]
 layout_mode = 3
+anchors_preset = 0
+offset_right = 164.0
+offset_bottom = 25.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1673508643]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -984.0
-offset_bottom = -626.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1673508643]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 163.0
-offset_bottom = 24.0
 texture = ExtResource("1_qp8hl")
 patch_margin_left = 6
 patch_margin_top = 6
