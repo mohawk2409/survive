@@ -6,7 +6,7 @@ var direction = 1
 @onready var game: Node2D = $"../.."
 @onready var node_2d: Node2D = $"."
 const KILLZONE_OFFSET = Vector2(7,1)
-var health = 1
+var health = 3
 
 var player: CharacterBody2D
 
@@ -38,19 +38,22 @@ func set_direction(new_direction: int) -> void:
 	animated_sprite_2d.flip_h = (direction == 1)
 	# Valeur absolue calculée à partir de la direction, jamais "= -position"
 	collision_shape_2d_killing_zone.position = Vector2(KILLZONE_OFFSET.x * direction, KILLZONE_OFFSET.y)
-
+"""
 func _on_killingzone_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		print("here")
 		queue_free()
 		game.handle_coins(3)
-
+"""
 func take_damage(amount: int) -> void:
 	health -= amount
+	queue_redraw()
 	if health <= 0:
 		print("The enemy is dead")
 		queue_free()
 		game.handle_coins(3)
+	show_hitbox = not show_hitbox
+	queue_redraw()
 
 func _on_killzone_body_entered(_body: Node2D) -> void:
 	print("I'm dead")
@@ -60,5 +63,33 @@ func _on_killzone_body_entered(_body: Node2D) -> void:
 	if player.health == 0:
 		get_tree().call_deferred("reload_current_scene")
 
+@onready var hurtbox: CollisionShape2D = $Area2D/Hurtbox
+
+var debug_color := Color(1, 0, 0, 0.4)
+var show_hitbox := false
+@onready var timer: Timer = $Timer
+
+func _draw():
+	if not show_hitbox:
+		return
+	modulate = Color(1,0,0)
+	timer.start(0.1)
+	#draw_set_transform_matrix(hurtbox.transform)
+	#hurtbox.shape.draw(get_canvas_item(), debug_color)
+func _on_timer_timeout() -> void:
+	modulate = Color(1,1,1)
+"""
+func _unhandled_input(event):
+	if event.is_action_pressed("attack"):
+		show_hitbox = not show_hitbox
+		queue_redraw()
+
+
 	
+func _process(_delta):
+	var held = Input.is_action_pressed("attack")
+	if held != show_hitbox:
+		show_hitbox = held
+		queue_redraw()
 	#get_tree().call_deferred("reload_current_scene")
+"""
