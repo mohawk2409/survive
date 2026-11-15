@@ -59,7 +59,12 @@ func _physics_process(delta: float) -> void:
 				animated_sprite_2d.play("Run")
 		else:
 			animated_sprite_2d.play("Jump")
-		
+	if is_attacking and (
+		Input.is_action_just_pressed("move_left")
+		or Input.is_action_just_pressed("move_right")
+		or Input.is_action_just_pressed("jump")
+	):
+		is_attacking = false	
 	
 	if direction:
 		velocity.x = direction * SPEED*0.75

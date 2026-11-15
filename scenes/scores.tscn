@@ -3,27 +3,33 @@
 [ext_resource type="Script" uid="uid://c0hxu03wlcdic" path="res://scripts/scores.gd" id="1_p8jrb"]
 [ext_resource type="Texture2D" uid="uid://cu0kbp5sl3b0i" path="res://assets/sprites/coin.png" id="1_r5nmk"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6vb0"]
+atlas = ExtResource("1_r5nmk")
+region = Rect2(16, 0, 16, 0)
+
 [node name="Score" type="Control" unique_id=1507311229]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 18.0
+offset_bottom = 11.0
 scale = Vector2(4, 4)
 script = ExtResource("1_p8jrb")
 
 [node name="Label" type="Label" parent="." unique_id=325859803]
 texture_filter = 1
 layout_mode = 0
-offset_left = 20.0
-offset_top = -26.0
-offset_right = 45.0
-offset_bottom = -9.0
-scale = Vector2(3, 3)
+offset_left = 10.75
+offset_top = -2.75
+offset_right = 35.75
+offset_bottom = 14.25
 theme_override_font_sizes/font_size = 12
 text = "0"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=593307825]
-scale = Vector2(3, 3)
-texture = ExtResource("1_r5nmk")
-region_enabled = true
-region_rect = Rect2(17.07111, 0, 13.408321, 16)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2076014246]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.25
+offset_right = 12.75
+offset_bottom = 12.5
+texture = SubResource("AtlasTexture_a6vb0")
+expand_mode = 1

@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://c28dd7213dpph" path="res://inventory/weapon.gd" id="14_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://fh5mtav07tgw" path="res://scenes/stick_collectable.tscn" id="14_trtic"]
 [ext_resource type="Texture2D" uid="uid://dji4es8uslb4q" path="res://assets/sprites/stone-hatchet-16x16.png" id="15_264po"]
+[ext_resource type="PackedScene" uid="uid://cebpx1imfycsa" path="res://scenes/bottom_bar_ui.tscn" id="19_264po"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -330,15 +331,26 @@ position = Vector2(657, -43)
 position = Vector2(31, -44)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=431231060]
-layer = 0
-scale = Vector2(0.2, 0.2)
-transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
+follow_viewport_enabled = true
+follow_viewport_scale = 2.0
 
 [node name="Score" parent="CanvasLayer" unique_id=1507311229 instance=ExtResource("9_0tnpc")]
-offset_left = 44.999996
-offset_top = 65.0
-offset_right = 85.0
-offset_bottom = 105.0
+offset_left = -98.0
+offset_top = -58.5
+offset_right = -81.0
+offset_bottom = -52.125
+scale = Vector2(1, 1)
+
+[node name="bottom_bar_ui" parent="CanvasLayer" unique_id=879348506 instance=ExtResource("19_264po")]
+anchors_preset = -1
+anchor_left = -0.11000001
+anchor_top = -0.034
+anchor_right = 0.142
+anchor_bottom = 0.16600001
+offset_left = 130.72
+offset_top = 68.032
+offset_right = -90.583984
+offset_bottom = -49.067997
 
 [node name="House" parent="." unique_id=1347396065 instance=ExtResource("11_kvpfn")]
 position = Vector2(-169, 3)
