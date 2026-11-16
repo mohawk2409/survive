@@ -331,26 +331,25 @@ position = Vector2(657, -43)
 position = Vector2(31, -44)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=431231060]
-follow_viewport_enabled = true
 
 [node name="bottom_bar_ui" parent="CanvasLayer" unique_id=879348506 instance=ExtResource("19_264po")]
+z_index = 1
+z_as_relative = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -187.0
-offset_top = -89.0
-offset_right = -23.0
-offset_bottom = -64.0
+offset_left = -82.0
+offset_top = -25.0
+offset_right = 82.0
+offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Score" parent="CanvasLayer" unique_id=1507311229 instance=ExtResource("9_0tnpc")]
-offset_left = -94.0
-offset_top = -60.0
-offset_right = -77.0
-offset_bottom = -53.625
+offset_right = 17.0
+offset_bottom = 6.375
 scale = Vector2(1, 1)
 
 [node name="House" parent="." unique_id=1347396065 instance=ExtResource("11_kvpfn")]

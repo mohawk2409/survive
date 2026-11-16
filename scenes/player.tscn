@@ -373,6 +373,8 @@ shape = SubResource("RectangleShape2D_64lr4")
 
 [node name="Inv_UI" parent="." unique_id=878879538 instance=ExtResource("4_dqkch")]
 visible = false
+z_index = 2
+z_as_relative = false
 offset_left = 41.0
 offset_top = -83.0
 offset_right = 41.29599
