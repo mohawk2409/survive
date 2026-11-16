@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ba3svsedc525m" path="res://inventory/inventory-background.png" id="2_w82yi"]
 [ext_resource type="PackedScene" uid="uid://yfngsuuelvbx" path="res://inventory/inv_ui_slot.tscn" id="3_dn3an"]
 
-[node name="Inv_UI" type="Control" unique_id=878879538]
+[node name="inv" type="Control" unique_id=878879538]
 z_index = 1
 layout_mode = 3
 anchor_right = 0.108

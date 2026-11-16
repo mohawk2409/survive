@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://dy50meknmxcoo" path="res://scripts/camera_2d.gd" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://by7we5eb5m8op" path="res://scenes/enemy.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://pv6brclxefg3" path="res://scenes/scores.tscn" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://b8l8l28vp16id" path="res://inventory/inv_ui.gd" id="9_5newe"]
+[ext_resource type="PackedScene" uid="uid://n61kjt0wc4vv" path="res://inventory/inv_ui.tscn" id="11_1kice"]
 [ext_resource type="PackedScene" uid="uid://cg1nb8x6av67s" path="res://scenes/forgery_shop.tscn" id="11_ir15t"]
 [ext_resource type="PackedScene" uid="uid://ddyhk8bmpuf04" path="res://scenes/house.tscn" id="11_kvpfn"]
 [ext_resource type="Resource" uid="uid://cqp1bwx8dklci" path="res://axe_test.tres" id="13_ca42v"]
@@ -332,22 +334,42 @@ position = Vector2(31, -44)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=431231060]
 
-[node name="bottom_bar_ui" parent="CanvasLayer" unique_id=879348506 instance=ExtResource("19_264po")]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=522027452]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_5newe")
+
+[node name="bottom_inv_ui" parent="CanvasLayer/Control" unique_id=879348506 instance=ExtResource("19_264po")]
 z_index = 1
 z_as_relative = false
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -82.0
-offset_top = -25.0
-offset_right = 82.0
-offset_bottom = 0.0
+offset_left = 42.0
+offset_top = 97.0
+offset_right = 206.0
+offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Score" parent="CanvasLayer" unique_id=1507311229 instance=ExtResource("9_0tnpc")]
+[node name="inv_ui" parent="CanvasLayer/Control" unique_id=878879538 instance=ExtResource("11_1kice")]
+visible = false
+z_index = 2
+z_as_relative = false
+layout_mode = 1
+offset_left = 41.0
+offset_top = -83.0
+offset_right = 41.29599
+offset_bottom = -82.94401
+script = null
+
+[node name="Score" parent="CanvasLayer/Control" unique_id=1507311229 instance=ExtResource("9_0tnpc")]
+layout_mode = 0
 offset_right = 17.0
 offset_bottom = 6.375
 scale = Vector2(1, 1)

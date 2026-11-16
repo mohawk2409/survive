@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bhqlgaeisqull" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Resource" uid="uid://v3pic8i080ot" path="res://inventory/player_inv.tres" id="2_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://n61kjt0wc4vv" path="res://inventory/inv_ui.tscn" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bffrekojbhhvm" path="res://assets/sprites/Gangsters_2/Jump.png" id="4_fjrip"]
 [ext_resource type="Texture2D" uid="uid://cstndlch1ludc" path="res://assets/sprites/Gangsters_2/Idle.png" id="4_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://dkpq2yd78hush" path="res://assets/sprites/Gangsters_2/Run.png" id="6_smehm"]
@@ -370,15 +369,6 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=127650686]
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_64lr4")
-
-[node name="Inv_UI" parent="." unique_id=878879538 instance=ExtResource("4_dqkch")]
-visible = false
-z_index = 2
-z_as_relative = false
-offset_left = 41.0
-offset_top = -83.0
-offset_right = 41.29599
-offset_bottom = -82.944
 
 [node name="Area2D" parent="." unique_id=620049087 instance=ExtResource("10_y4r1p")]
 position = Vector2(-1, 0)

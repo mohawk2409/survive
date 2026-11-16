@@ -1,7 +1,9 @@
 extends Control
 
 @onready var inv: Inv = preload("res://inventory/player_inv.tres")
-@onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+@onready var bottom_slots: Array = $bottom_inv_ui/NinePatchRect/GridContainer.get_children()
+@onready var inv_slots: Array = $inv_ui/NinePatchRect/GridContainer.get_children()
+@onready var slots: Array = bottom_slots + inv_slots   # index 0–7 = bar, 8–19 = bag
 @onready var held_item: TextureRect = $HeldItem
 
 var player = null
@@ -33,11 +35,11 @@ func _process(_delta):
 		else:
 			open()
 func open():
-	visible = true
+	$inv_ui.visible = true
 	is_open = true
 	
 func close():
-	visible = false
+	$inv_ui.visible = false
 	is_open = false
 
 func get_slot_index_under_mouse() -> int:

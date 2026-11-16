@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ba3svsedc525m" path="res://inventory/inventory-background.png" id="1_qp8hl"]
 [ext_resource type="PackedScene" uid="uid://yfngsuuelvbx" path="res://inventory/inv_ui_slot.tscn" id="2_8e8qy"]
 
-[node name="bottom_bar_ui" type="Control" unique_id=879348506]
+[node name="bottom_inv_ui" type="Control" unique_id=879348506]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 164.0
