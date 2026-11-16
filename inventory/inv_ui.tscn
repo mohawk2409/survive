@@ -113,13 +113,3 @@ layout_mode = 2
 
 [node name="Inv_UI_slot24" parent="NinePatchRect/GridContainer" unique_id=950799303 instance=ExtResource("3_dn3an")]
 layout_mode = 2
-
-[node name="HeldItem" type="TextureRect" parent="." unique_id=1712733440]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 0
-offset_left = 3.5
-offset_top = 74.0
-offset_right = 19.5
-offset_bottom = 90.0
-mouse_filter = 2
-expand_mode = 1

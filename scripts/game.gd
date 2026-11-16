@@ -1,7 +1,7 @@
 extends Node2D
 
 const Scores = preload("uid://c0hxu03wlcdic")
-@onready var score: Control = $CanvasLayer/Score
+@onready var score: Control = $CanvasLayer/Control/Score
 
 @export var item: InvItem
 var player = null

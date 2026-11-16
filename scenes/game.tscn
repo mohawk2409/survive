@@ -358,14 +358,18 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="inv_ui" parent="CanvasLayer/Control" unique_id=878879538 instance=ExtResource("11_1kice")]
-visible = false
 z_index = 2
 z_as_relative = false
 layout_mode = 1
-offset_left = 41.0
-offset_top = -83.0
-offset_right = 41.29599
-offset_bottom = -82.94401
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 87.0
+offset_top = 22.0
+offset_right = 205.68
+offset_bottom = 99.880005
 script = null
 
 [node name="Score" parent="CanvasLayer/Control" unique_id=1507311229 instance=ExtResource("9_0tnpc")]
@@ -373,6 +377,16 @@ layout_mode = 0
 offset_right = 17.0
 offset_bottom = 6.375
 scale = Vector2(1, 1)
+
+[node name="HeldItem" type="TextureRect" parent="CanvasLayer/Control" unique_id=239567465]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.5
+offset_top = 74.0
+offset_right = 19.5
+offset_bottom = 90.0
+mouse_filter = 2
+expand_mode = 1
 
 [node name="House" parent="." unique_id=1347396065 instance=ExtResource("11_kvpfn")]
 position = Vector2(-169, 3)
