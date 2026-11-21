@@ -19,3 +19,8 @@ func insert(item : InvItem, is_not_stackable: bool = false):
 			emptyslots[0].item = item
 			emptyslots[0].amount = 1
 	update.emit()
+
+func index(item : InvItem):
+	for i in range(len(slots)):
+		if slots[i].item == item:
+			return i
