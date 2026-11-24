@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Craft" format=3 uid="uid://bkx3svaxrxpon"]
+
+[ext_resource type="Texture2D" uid="uid://nxbandtnmdvu" path="res://assets/sprites/items/radio_16x16.png" id="1_swevr"]
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="2_yfdnh"]
+[ext_resource type="Resource" uid="uid://cja0hfedkpa3b" path="res://inventory/antenna.tres" id="3_hfdi5"]
+[ext_resource type="Resource" uid="uid://bf1nnxf081fxu" path="res://inventory/battery.tres" id="4_dfs8r"]
+[ext_resource type="Resource" uid="uid://do4lemartmqow" path="res://inventory/speaker.tres" id="5_iph2o"]
+[ext_resource type="Resource" uid="uid://cnym5b81glb06" path="res://inventory/radio.tres" id="6_blowr"]
+[ext_resource type="Script" uid="uid://bqatexrl8u6su" path="res://scripts/items_craft.gd" id="7_72d2b"]
+
+[resource]
+script = ExtResource("7_72d2b")
+name = "Radio"
+icon = ExtResource("1_swevr")
+items_needed = Dictionary[ExtResource("2_yfdnh"), int]({
+ExtResource("3_hfdi5"): 1,
+ExtResource("4_dfs8r"): 1,
+ExtResource("5_iph2o"): 1
+})
+product = ExtResource("6_blowr")
+metadata/_custom_type_script = "uid://bqatexrl8u6su"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Craft" format=3 uid="uid://cqw2y8hcqbkih"]
+
+[ext_resource type="Texture2D" uid="uid://dji4es8uslb4q" path="res://assets/sprites/stone-hatchet-16x16.png" id="1_fqt7a"]
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="2_t4q73"]
+[ext_resource type="Resource" uid="uid://ukk6om2kwj2k" path="res://inventory/stick.tres" id="3_no8hy"]
+[ext_resource type="Resource" uid="uid://mi06kijcrvri" path="res://inventory/axe.tres" id="4_5dt5u"]
+[ext_resource type="Script" uid="uid://bqatexrl8u6su" path="res://scripts/items_craft.gd" id="5_tlslb"]
+
+[resource]
+script = ExtResource("5_tlslb")
+name = "Axe"
+icon = ExtResource("1_fqt7a")
+items_needed = Dictionary[ExtResource("2_t4q73"), int]({
+ExtResource("3_no8hy"): 1
+})
+product = ExtResource("4_5dt5u")
+metadata/_custom_type_script = "uid://bqatexrl8u6su"

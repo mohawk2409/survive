@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://wj0ogbqqngtg"]
+
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="1_v8i47"]
+[ext_resource type="Texture2D" uid="uid://my6yy702skha" path="res://assets/sprites/items/transistor_16x16.png" id="2_be1ja"]
+
+[resource]
+script = ExtResource("1_v8i47")
+name = "transistor"
+texture = ExtResource("2_be1ja")
+metadata/_custom_type_script = "uid://bvfexcx5v7txe"

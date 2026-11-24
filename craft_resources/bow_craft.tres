@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Craft" format=3 uid="uid://dmv2sdhnhreog"]
+
+[ext_resource type="Texture2D" uid="uid://dqtpye4aa8v2c" path="res://assets/sprites/items/bow_16x16.png" id="1_yg6lx"]
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="2_c4acj"]
+[ext_resource type="Resource" uid="uid://ukk6om2kwj2k" path="res://inventory/stick.tres" id="3_kgqe3"]
+[ext_resource type="Resource" uid="uid://cr0bn43p8iyku" path="res://inventory/bow.tres" id="4_wrju6"]
+[ext_resource type="Script" uid="uid://bqatexrl8u6su" path="res://scripts/items_craft.gd" id="5_6y6e0"]
+
+[resource]
+script = ExtResource("5_6y6e0")
+name = "bow"
+icon = ExtResource("1_yg6lx")
+items_needed = Dictionary[ExtResource("2_c4acj"), int]({
+ExtResource("3_kgqe3"): 3
+})
+product = ExtResource("4_wrju6")
+metadata/_custom_type_script = "uid://bqatexrl8u6su"

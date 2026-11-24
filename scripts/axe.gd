@@ -9,13 +9,13 @@ func _ready():
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("i'm taking the axe and its damage value is : ", item.damage)
 	player = body
 	player.collect(item, true)
 	index = player.inv.index(item)
 	print("The axe index is ", index)
-	if index == 0:
-		player.set_damage(2)
-		print("The new value of damage is ", player.damage)
+	if item.name == "axe":
+		if index == 0:
+			player.set_damage(2)
+			print("The new value of damage is ", player.damage)
 		
 	queue_free()

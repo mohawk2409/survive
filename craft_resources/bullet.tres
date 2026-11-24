@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Craft" format=3 uid="uid://7aaj8cc7tkt"]
+
+[ext_resource type="Texture2D" uid="uid://b4abt0m1wvb8d" path="res://assets/sprites/bullets_16x16.png" id="1_cyanb"]
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="2_qxrid"]
+[ext_resource type="Resource" uid="uid://6ncsf4ccuseg" path="res://inventory/gunpowder.tres" id="3_qxrid"]
+[ext_resource type="Resource" uid="uid://dfqtwfejvadim" path="res://inventory/steelingot.tres" id="4_umhct"]
+[ext_resource type="Script" uid="uid://bqatexrl8u6su" path="res://scripts/items_craft.gd" id="4_wubkh"]
+[ext_resource type="Resource" uid="uid://br8ginhq2ev8d" path="res://inventory/bullet.tres" id="5_umhct"]
+
+[resource]
+script = ExtResource("4_wubkh")
+name = "bullet"
+icon = ExtResource("1_cyanb")
+items_needed = Dictionary[ExtResource("2_qxrid"), int]({
+ExtResource("3_qxrid"): 1,
+ExtResource("4_umhct"): 2
+})
+product = ExtResource("5_umhct")
+product_amount = 5
+metadata/_custom_type_script = "uid://bqatexrl8u6su"

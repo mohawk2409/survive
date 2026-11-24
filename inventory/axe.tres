@@ -1,8 +1,10 @@
 [gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://mi06kijcrvri"]
 
 [ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="1_671as"]
+[ext_resource type="Texture2D" uid="uid://c2285kglj60lk" path="res://assets/sprites/string.png" id="2_f74lq"]
 
 [resource]
 script = ExtResource("1_671as")
-name = "axe"
+name = "string"
+texture = ExtResource("2_f74lq")
 metadata/_custom_type_script = "uid://bvfexcx5v7txe"

@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://n61kjt0wc4vv" path="res://inventory/inv_ui.tscn" id="11_1kice"]
 [ext_resource type="PackedScene" uid="uid://cg1nb8x6av67s" path="res://scenes/forgery_shop.tscn" id="11_ir15t"]
 [ext_resource type="PackedScene" uid="uid://ddyhk8bmpuf04" path="res://scenes/house.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://5udngoict57y" path="res://scenes/string.tscn" id="13_37s47"]
+[ext_resource type="PackedScene" uid="uid://7warwjyi2b80" path="res://scenes/crafting_system.tscn" id="13_bt5mj"]
 [ext_resource type="Resource" uid="uid://cqp1bwx8dklci" path="res://axe_test.tres" id="13_ca42v"]
 [ext_resource type="PackedScene" uid="uid://ciol70vwai4ow" path="res://scenes/axe.tscn" id="13_kvuet"]
 [ext_resource type="Script" uid="uid://c28dd7213dpph" path="res://inventory/weapon.gd" id="14_ssvqc"]
@@ -377,15 +379,29 @@ offset_right = 17.0
 offset_bottom = 6.375
 scale = Vector2(1, 1)
 
-[node name="HeldItem" type="TextureRect" parent="CanvasLayer/Control" unique_id=239567465]
+[node name="CraftingSystem" parent="CanvasLayer/Control" unique_id=1221013414 instance=ExtResource("13_bt5mj")]
+layout_mode = 1
+anchor_left = 0.6249999
+anchor_top = 0.67499995
+anchor_right = 1.0380001
+anchor_bottom = 1.15
+offset_left = -78.0
+offset_top = -46.0
+offset_right = 191.48
+offset_bottom = 39.049995
+scale = Vector2(0.8, 0.8)
+metadata/_edit_use_anchors_ = true
+
+[node name="HeldItem" type="TextureRect" parent="CanvasLayer/Control" unique_id=333471770]
+visible = false
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 0
-offset_left = 3.5
-offset_top = 74.0
-offset_right = 19.5
-offset_bottom = 90.0
+offset_right = 40.0
+offset_bottom = 40.0
 mouse_filter = 2
-expand_mode = 1
+
+[node name="Area2D2" parent="." unique_id=739423097 instance=ExtResource("13_37s47")]
+position = Vector2(-105, 55)
 
 [node name="House" parent="." unique_id=1347396065 instance=ExtResource("11_kvpfn")]
 position = Vector2(-169, 3)
@@ -393,12 +409,12 @@ position = Vector2(-169, 3)
 [node name="Area2D" parent="." unique_id=977264550 instance=ExtResource("11_ir15t")]
 position = Vector2(-338, 21)
 
-[node name="axe" parent="." unique_id=739423097 instance=ExtResource("13_kvuet")]
+[node name="axe" parent="." unique_id=1302589373 instance=ExtResource("13_kvuet")]
 position = Vector2(-74, 53)
 item = ExtResource("13_ca42v")
 
 [node name="axe2" parent="." unique_id=1480908147 instance=ExtResource("13_kvuet")]
-position = Vector2(-121, 54)
+position = Vector2(-7, 52)
 item = SubResource("Resource_rysoc")
 
 [node name="stick_collectable" parent="." unique_id=1776421908 instance=ExtResource("14_trtic")]

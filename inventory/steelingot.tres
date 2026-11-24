@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://dfqtwfejvadim"]
+
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="1_2vxd7"]
+[ext_resource type="Texture2D" uid="uid://tun2gv181aw6" path="res://assets/sprites/steel_ingot_16x16.png" id="2_4j4tp"]
+
+[resource]
+script = ExtResource("1_2vxd7")
+name = "steelingot"
+texture = ExtResource("2_4j4tp")
+metadata/_custom_type_script = "uid://bvfexcx5v7txe"

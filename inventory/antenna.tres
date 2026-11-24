@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://cja0hfedkpa3b"]
+
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="1_3eiov"]
+[ext_resource type="Texture2D" uid="uid://p4fqld10kacm" path="res://assets/sprites/items/antenna_16x16.png" id="2_mfqkm"]
+
+[resource]
+script = ExtResource("1_3eiov")
+name = "antenna"
+texture = ExtResource("2_mfqkm")
+metadata/_custom_type_script = "uid://bvfexcx5v7txe"

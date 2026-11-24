@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://euq33tito8a7"]
+
+[ext_resource type="Script" uid="uid://bvfexcx5v7txe" path="res://inventory/inventory_item.gd" id="1_2scgl"]
+[ext_resource type="Texture2D" uid="uid://ldxfefwerydt" path="res://assets/sprites/pistol_16x16.png" id="2_wess8"]
+
+[resource]
+script = ExtResource("1_2scgl")
+name = "gun"
+texture = ExtResource("2_wess8")
+metadata/_custom_type_script = "uid://bvfexcx5v7txe"

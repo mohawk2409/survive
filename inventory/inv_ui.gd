@@ -70,3 +70,22 @@ func slot_gui_input(event: InputEvent, slot: InvUISlot):
 				inv.slots[target_index] = tmp
 				update_slots()
 			dragged_index = -1
+
+func remove_item(item : InvItem, amount : int = 1):
+	for slot in slots:
+		if slot.item == item:
+			slot.amount -= amount
+			return
+
+
+func use_items_needed(items_needed : Inv):
+	for key in items_needed:
+		slots[key] -= items_needed[key]
+		remove_item(key, items_needed[key])
+
+
+func check_items_needed(items_needed : Inv):
+	for key in items_needed:
+		if slots[key] < items_needed[key]:
+			return false
+	return true

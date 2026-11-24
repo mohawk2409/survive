@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://7warwjyi2b80"]
+
+[ext_resource type="Script" uid="uid://cl3gbj3w8ce3u" path="res://scripts/crafting_system.gd" id="1_gqwwy"]
+[ext_resource type="Script" uid="uid://bqatexrl8u6su" path="res://scripts/items_craft.gd" id="2_682mr"]
+[ext_resource type="Resource" uid="uid://cqw2y8hcqbkih" path="res://craft_resources/axe_craft.tres" id="3_6modl"]
+[ext_resource type="Resource" uid="uid://dmv2sdhnhreog" path="res://craft_resources/bow_craft.tres" id="4_2wysd"]
+[ext_resource type="Resource" uid="uid://bkx3svaxrxpon" path="res://craft_resources/radio_craft.tres" id="5_ms3w2"]
+
+[node name="CraftingSystem" type="Control" unique_id=1221013414 node_paths=PackedStringArray("craft_container", "queue")]
+z_index = 1
+layout_mode = 3
+anchor_right = 0.41300002
+anchor_bottom = 0.47500002
+offset_left = 1.0
+offset_right = 171.056
+offset_bottom = 85.049995
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gqwwy")
+crafts = Array[ExtResource("2_682mr")]([ExtResource("3_6modl"), ExtResource("4_2wysd"), ExtResource("5_ms3w2")])
+craft_container = NodePath("Panel/ScrollContainer/Crafts")
+queue = NodePath("Panel2/ScrollContainer/Queue")
+
+[node name="Panel" type="Panel" parent="." unique_id=2056806908]
+custom_minimum_size = Vector2(118, 77)
+layout_mode = 0
+offset_left = 23.0
+offset_top = 31.0
+offset_right = 165.0
+offset_bottom = 129.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=868562959]
+top_level = true
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 34.0
+offset_right = -28.0
+offset_bottom = 57.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 9
+text = "Crafting"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=486312109]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 15.0
+offset_right = 115.0
+offset_bottom = 69.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="Crafts" type="VBoxContainer" parent="Panel/ScrollContainer" unique_id=1081640804]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=623604890]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 109.0
+offset_right = 243.0
+offset_bottom = 140.0
+text = "Create"
+
+[node name="Panel2" type="Panel" parent="." unique_id=695471496]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -66.0
+offset_right = -39.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel2" unique_id=2014173657]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.75
+offset_right = 15.75
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 9
+text = "Queue"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel2" unique_id=1226855088]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -7.5
+offset_top = -55.0
+offset_right = 7.5
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="Queue" type="VBoxContainer" parent="Panel2/ScrollContainer" unique_id=1132480048]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

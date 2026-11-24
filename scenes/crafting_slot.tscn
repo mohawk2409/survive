@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://bne0v846e81dv"]
+
+[ext_resource type="Script" uid="uid://c4my7krtysccr" path="res://scripts/crafting_slot.gd" id="1_m5iqw"]
+
+[node name="crafting_slot" type="Panel" unique_id=1649601971]
+custom_minimum_size = Vector2(100, 15)
+offset_right = 122.0
+offset_bottom = 15.0
+script = ExtResource("1_m5iqw")
+
+[node name="Product" type="TextureRect" parent="." unique_id=1551922686]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(15, 13)
+layout_mode = 0
+offset_left = 84.0
+offset_top = 1.0
+offset_right = 99.0
+offset_bottom = 16.0
+expand_mode = 1
+
+[node name="Name" type="Label" parent="." unique_id=10693305]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 0
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 9
+text = "name"
+
+[node name="items" type="HBoxContainer" parent="." unique_id=1509404848]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -7.5
+offset_right = 26.5
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="items_needed" type="TextureRect" parent="items" unique_id=1820557971]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 1
+
+[node name="amount" type="Label" parent="items/items_needed" unique_id=1074572714]
+custom_minimum_size = Vector2(40, 14)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 3
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="items_needed2" type="TextureRect" parent="items" unique_id=2049717267]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 1
+
+[node name="amount" type="Label" parent="items/items_needed2" unique_id=344138970]
+custom_minimum_size = Vector2(40, 14)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 3
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="items_needed3" type="TextureRect" parent="items" unique_id=658995797]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 1
+
+[node name="amount" type="Label" parent="items/items_needed3" unique_id=774238605]
+custom_minimum_size = Vector2(40, 14)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.5
+offset_top = -15.0
+offset_right = 5.5
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 3
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="items_needed4" type="TextureRect" parent="items" unique_id=2024919042]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 1
+
+[node name="amount" type="Label" parent="items/items_needed4" unique_id=173749999]
+custom_minimum_size = Vector2(40, 14)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.5
+offset_top = -15.0
+offset_right = 5.5
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 3
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
