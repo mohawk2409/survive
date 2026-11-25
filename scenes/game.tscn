@@ -390,7 +390,6 @@ offset_top = -46.0
 offset_right = 191.48
 offset_bottom = 39.049995
 scale = Vector2(0.8, 0.8)
-metadata/_edit_use_anchors_ = true
 
 [node name="HeldItem" type="TextureRect" parent="CanvasLayer/Control" unique_id=333471770]
 visible = false

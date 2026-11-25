@@ -72,20 +72,36 @@ func slot_gui_input(event: InputEvent, slot: InvUISlot):
 			dragged_index = -1
 
 func remove_item(item : InvItem, amount : int = 1):
-	for slot in slots:
+	for slot in inv.slots:
+		if amount <= 0:
+			break
 		if slot.item == item:
-			slot.amount -= amount
-			return
+			var taken: int = min(slot.amount, amount)
+			slot.amount -= taken
+			amount -= taken
+			if slot.amount <= 0:      # empty the slot completely
+				slot.item = null
+				slot.amount = 0
+	inv.update.emit()
 
 
-func use_items_needed(items_needed : Inv):
+func use_items_needed(items_needed : Dictionary):
+	for item in items_needed:
+		remove_item(item, items_needed[item])
+
+func count_item(item: InvItem):
+	var total := 0
+	for s in inv.slots:
+		if s.item == item:
+			total += s.amount
+	return total
+
+func check_items_needed(items_needed : Dictionary):
 	for key in items_needed:
-		slots[key] -= items_needed[key]
-		remove_item(key, items_needed[key])
-
-
-func check_items_needed(items_needed : Inv):
-	for key in items_needed:
-		if slots[key] < items_needed[key]:
+		if count_item(key) < items_needed[key]:
 			return false
 	return true
+	
+func add_item(item: InvItem, amount: int = 1) -> void:
+	for i in amount:
+		inv.insert(item)

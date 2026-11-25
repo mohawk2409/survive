@@ -1,8 +1,7 @@
 extends Control
-
 @onready var craft_slot_node: PackedScene = preload("res://scenes/crafting_slot.tscn")
 @onready var queue_slot_node: PackedScene = preload("res://scenes/queue_slot.tscn")
-@onready var inv_ui: Control = $"../inv_ui"
+@onready var inv_ui: Control = $".."
 @export var crafts: Array[Craft]:
 	set(value):
 		crafts = value
@@ -61,7 +60,7 @@ func queue_item(item : Craft):
  
 	var queue_slot = queue_slot_node.instantiate()
 	queue.add_child(queue_slot)
-	queue_slot.recipe = item
+	queue_slot.craft = item
 	queue_slot.completed.connect(finished_crafting)
 
 func finished_crafting(item : Craft, node : Panel):
