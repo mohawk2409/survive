@@ -337,9 +337,11 @@ position = Vector2(31, -44)
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=522027452]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("9_5newe")
 
 [node name="bottom_inv_ui" parent="CanvasLayer/Control" unique_id=879348506 instance=ExtResource("19_264po")]
@@ -387,7 +389,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
 
-[node name="crafting_building" parent="CanvasLayer/Control" unique_id=977264550 instance=ExtResource("11_ir15t")]
+[node name="crafting_building" parent="." unique_id=977264550 instance=ExtResource("11_ir15t")]
 position = Vector2(-338, 21)
 
 [node name="Area2D2" parent="." unique_id=739423097 instance=ExtResource("13_37s47")]
