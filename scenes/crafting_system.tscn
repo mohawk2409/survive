@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://cqw2y8hcqbkih" path="res://craft_resources/axe_craft.tres" id="3_6modl"]
 [ext_resource type="Resource" uid="uid://dmv2sdhnhreog" path="res://craft_resources/bow_craft.tres" id="4_2wysd"]
 [ext_resource type="Resource" uid="uid://bkx3svaxrxpon" path="res://craft_resources/radio_craft.tres" id="5_ms3w2"]
+[ext_resource type="Resource" uid="uid://7aaj8cc7tkt" path="res://craft_resources/bullet.tres" id="6_ms3w2"]
 
 [node name="CraftingSystem" type="Control" unique_id=1221013414 node_paths=PackedStringArray("craft_container", "queue")]
 z_index = 1
@@ -12,22 +13,29 @@ layout_mode = 3
 anchor_right = 0.41300002
 anchor_bottom = 0.47500002
 offset_left = 1.0
-offset_right = 171.056
-offset_bottom = 85.049995
+offset_right = 169.056
+offset_bottom = 87.049995
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gqwwy")
-crafts = Array[ExtResource("2_682mr")]([ExtResource("3_6modl"), ExtResource("4_2wysd"), ExtResource("5_ms3w2")])
+crafts = Array[ExtResource("2_682mr")]([ExtResource("3_6modl"), ExtResource("4_2wysd"), ExtResource("5_ms3w2"), ExtResource("6_ms3w2")])
 craft_container = NodePath("Panel/ScrollContainer/Crafts")
 queue = NodePath("Panel2/ScrollContainer/Queue")
 
 [node name="Panel" type="Panel" parent="." unique_id=2056806908]
 custom_minimum_size = Vector2(118, 77)
-layout_mode = 0
-offset_left = 23.0
-offset_top = 31.0
-offset_right = 165.0
-offset_bottom = 129.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -49.0
+offset_right = 59.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel" unique_id=868562959]
 top_level = true
@@ -36,20 +44,22 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -68.0
-offset_top = 34.0
-offset_right = -28.0
-offset_bottom = 57.0
+offset_left = -21.0
+offset_top = 38.0
+offset_right = 19.0
+offset_bottom = 51.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 9
 text = "Crafting"
+horizontal_alignment = 3
+vertical_alignment = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=486312109]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 15.0
-offset_right = 115.0
-offset_bottom = 69.0
+offset_left = 8.0
+offset_top = 26.0
+offset_right = 105.0
+offset_bottom = 86.0
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
@@ -58,10 +68,10 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="." unique_id=623604890]
 layout_mode = 0
-offset_left = 183.0
-offset_top = 109.0
-offset_right = 243.0
-offset_bottom = 140.0
+offset_left = 211.0
+offset_top = 98.0
+offset_right = 271.0
+offset_bottom = 129.0
 text = "Create"
 
 [node name="Panel2" type="Panel" parent="." unique_id=695471496]
@@ -71,10 +81,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -110.0
-offset_top = -66.0
-offset_right = -39.0
-offset_bottom = 10.0
+offset_left = -79.0
+offset_top = -69.0
+offset_right = -8.0
+offset_bottom = 7.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -97,9 +107,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -7.5
+offset_left = -15.5
 offset_top = -55.0
-offset_right = 7.5
+offset_right = 21.5
 grow_horizontal = 2
 grow_vertical = 0
 horizontal_scroll_mode = 3

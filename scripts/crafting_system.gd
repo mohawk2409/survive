@@ -1,7 +1,8 @@
 extends Control
 @onready var craft_slot_node: PackedScene = preload("res://scenes/crafting_slot.tscn")
 @onready var queue_slot_node: PackedScene = preload("res://scenes/queue_slot.tscn")
-@onready var inv_ui: Control = $".."
+@onready var inv_ui: Control = $"../../inv_ui"
+@onready var crafting_system: Control = $"."
 @export var crafts: Array[Craft]:
 	set(value):
 		crafts = value
@@ -16,11 +17,28 @@ extends Control
 
 var selected_craft: Craft
 var selected_rect: Rect2
+var is_open = false
+
+func _process(_delta):
+	if Input.is_action_just_pressed("fly"):
+		if is_open:
+			close()
+		else:
+			open()
+
+func open():
+	crafting_system.visible = true
+	is_open = true
+
+func close():
+	print("?")
+	crafting_system.visible = false
+	is_open = false
 
 func _ready():
 	free_slots()
 	load_recipes()
-
+	close()
 func _draw():
 	draw_rect(selected_rect, Color.WHITE, false, 1)
 

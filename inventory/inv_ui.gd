@@ -1,5 +1,5 @@
 extends Control
-
+class_name InventoryUI
 @onready var inv: Inv = preload("res://inventory/player_inv.tres")
 @onready var bottom_slots: Array = $bottom_inv_ui/NinePatchRect/GridContainer.get_children()
 @onready var inv_slots: Array = $inv_ui/NinePatchRect/GridContainer.get_children()

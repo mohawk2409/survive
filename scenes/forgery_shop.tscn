@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://8jrxq5xombti" path="res://assets/sprites/atelier_marchand_128x88.png" id="1_e7loi"]
 [ext_resource type="Script" uid="uid://dqo4dm16ak40b" path="res://scripts/forgery_shop.gd" id="1_kkyyx"]
-[ext_resource type="PackedScene" uid="uid://63qy82421uv2" path="res://scenes/fabrication.tscn" id="3_es1c8"]
+[ext_resource type="PackedScene" uid="uid://7warwjyi2b80" path="res://scenes/crafting_system.tscn" id="3_es1c8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a6vb0"]
 size = Vector2(129, 86)
@@ -18,12 +18,12 @@ texture = ExtResource("1_e7loi")
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_a6vb0")
 
-[node name="Fabrication" parent="." unique_id=1250993282 instance=ExtResource("3_es1c8")]
-visible = false
-offset_left = -51.0
-offset_top = -32.0
-offset_right = -51.0
-offset_bottom = -32.0
+[node name="CraftingSystem" parent="." unique_id=1221013414 instance=ExtResource("3_es1c8")]
+offset_left = -149.0
+offset_top = -75.0
+offset_right = 132.0
+offset_bottom = 89.0
+scale = Vector2(0.8, 0.8)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
